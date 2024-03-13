@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './home.css';
 import Header from '../Layout/Header/Header';
-import { Container,Row,Col, Modal } from 'react-bootstrap';
+import { Container,Row,Col, Modal, Spinner } from 'react-bootstrap';
 import Details from '../Layout/Modal/Details'
 
 function Home(){
@@ -12,6 +12,7 @@ function Home(){
   const [longitudeError, setLongitudeError] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [weatherData, setWeatherData] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   // const handleOpen = () => {
   //   setShowModal(true)
@@ -44,12 +45,14 @@ function Home(){
       setLongitudeError('Longitude cannot be blank');
     }
     if (latitude.trim() !== '' && longitude.trim() !== '') {
+      setLoading(true);
       const API = 'https://api.openweathermap.org/data/2.5/weather'+'?lat='+latitude+'&lon='+longitude+'&appid='+process.env.REACT_APP_API_KEY;
       const response = await fetch(API);
       const data = await response.json();
       setWeatherData(data);
+      setLoading(false);
       setShowModal(true); // Show modal if there are no errors
-      console.log(data);
+      // console.log(data);
     }
   };
 
@@ -96,7 +99,10 @@ function Home(){
             </div>
         </Col>
       </Row>
-    </Container>  
+    </Container>
+    {loading && <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+    </Spinner>}
     {showModal && <Details open={showModal} onClose={handleClose} data={weatherData} />}
     </>
   );
