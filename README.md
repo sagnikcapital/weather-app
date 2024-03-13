@@ -12,10 +12,10 @@ A weather monitoring system is a technological solution designed to collect, pro
 - Open weather API
 
 ## Compatibility
-- [NPM  (8.14.0)]()
+- [NPM  (8.14.0)](https://monovm.com/blog/install-npm-on-ubuntu)
 - [Node (16.0.0)]()
 - [NPX  (8.14.0)]()
-- [React Cli (5.0.0)]()
+- [React Cli (5.0.0)](https://www.npmjs.com/package/react-cli)
 ## Installation and setup
 
 ### `npm run build` fails to minify
