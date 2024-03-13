@@ -35,7 +35,7 @@ $ cp .env.example .env
 ```sh
 $ npm start
 ```
-API Details:
+### API Details:
 | URL     |     Parameters    |    Method
 |---------|-------------------|--------------
 |https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key} |  lat, lon | GET |
