@@ -47,9 +47,7 @@ function Home(){
       const API = 'https://api.openweathermap.org/data/2.5/weather'+'?lat='+latitude+'&lon='+longitude+'&appid='+process.env.REACT_APP_WEATHER_API_KEY;
       const response = await fetch(API);
       const data = await response.json();
-      if(data.length){
-        setWeatherData(data);
-      }
+      setWeatherData(data);
       setShowModal(true); // Show modal if there are no errors
       console.log(data);
     }
