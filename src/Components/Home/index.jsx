@@ -10,6 +10,7 @@ function Home(){
   const [longitude, setlongitude] = useState('');
   const [latitudeError, setLatitudeError] = useState('');
   const [longitudeError, setLongitudeError] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -32,6 +33,10 @@ function Home(){
     }
     if (longitude.trim() === '') {
       setLongitudeError('Longitude cannot be blank');
+    }
+    if (!latitudeError && !longitudeError) {
+      setShowModal(true); // Show modal if there are no errors
+      console.log(true);
     }
   };
 
@@ -74,12 +79,12 @@ function Home(){
                 />
                 {longitudeError && <div className="error-message">{longitudeError}</div>}
               </div>  
-              <button class="search-btn" onClick={handleSubmit}  id="search-inp-btn">&#x027A4;</button>
+              <button className="search-btn" onClick={handleSubmit}  id="search-inp-btn">&#x027A4;</button>
             </div>
         </Col>
       </Row>
     </Container>  
-    {/* <Details /> */}
+    {showModal && <Details setShowModal={setShowModal} />}
     </>
   );
 }
