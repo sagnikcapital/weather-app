@@ -19,7 +19,7 @@ A weather monitoring system is a technological solution designed to collect, pro
 ## Installation and setup
 > Clone the Application
 ```sh
-$ git clone  https://github.com/sagnikcapital/weather-app.git
+$ git clone https://github.com/sagnikcapital/weather-app.git
 ```
 ```sh
 $ cd weather-app
