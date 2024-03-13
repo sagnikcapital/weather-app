@@ -44,7 +44,7 @@ function Home(){
       setLongitudeError('Longitude cannot be blank');
     }
     if (latitude.trim() !== '' && longitude.trim() !== '') {
-      const API = 'https://api.openweathermap.org/data/2.5/weather'+'?lat='+latitude+'&lon='+longitude+'&appid='+process.env.REACT_APP_WEATHER_API_KEY;
+      const API = 'https://api.openweathermap.org/data/2.5/weather'+'?lat='+latitude+'&lon='+longitude+'&appid='+process.env.REACT_APP_API_KEY;
       const response = await fetch(API);
       const data = await response.json();
       setWeatherData(data);

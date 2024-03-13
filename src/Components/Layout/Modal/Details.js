@@ -13,8 +13,8 @@ function Details({ open, onClose, data }) {
           <div>
             <p>Location: {data.name}</p>
             <p>Country: {data.sys.country}</p>
-            <p>Temperature: {data.main.temp}</p>
-            <p>Weather: {data.main.humidity}%</p>
+            <p>Temperature: {data.main.temp}F</p>
+            <p>Humidity: {data.main.humidity}%</p>
             <p>Wind Speed: {data.wind.speed}Km/Hr</p>
           </div>
         )}
