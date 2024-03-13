@@ -11,6 +11,7 @@ function Home(){
   const [latitudeError, setLatitudeError] = useState('');
   const [longitudeError, setLongitudeError] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [weatherData, setWeatherData] = useState(null);
 
   // const handleOpen = () => {
   //   setShowModal(true)
@@ -35,7 +36,7 @@ function Home(){
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (latitude.trim() === '') {
       setLatitudeError('Latitude cannot be blank');
     }
@@ -43,8 +44,14 @@ function Home(){
       setLongitudeError('Longitude cannot be blank');
     }
     if (latitude.trim() !== '' && longitude.trim() !== '') {
+      const API = 'https://api.openweathermap.org/data/2.5/weather'+'?lat='+latitude+'&lon='+longitude+'&appid='+process.env.REACT_APP_WEATHER_API_KEY;
+      const response = await fetch(API);
+      const data = await response.json();
+      if(data.length){
+        setWeatherData(data);
+      }
       setShowModal(true); // Show modal if there are no errors
-      console.log(true);
+      console.log(data);
     }
   };
 
@@ -92,7 +99,7 @@ function Home(){
         </Col>
       </Row>
     </Container>  
-    {showModal && <Details open={showModal} onClose={handleClose} />}
+    {showModal && <Details open={showModal} onClose={handleClose} data={weatherData} />}
     </>
   );
 }
