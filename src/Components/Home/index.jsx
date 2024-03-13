@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './home.css';
 import Header from '../Layout/Header/Header';
 import { Container,Row,Col, Modal } from 'react-bootstrap';
+import Details from '../Layout/Modal/Details'
 
 function Home(){
   const [latitude, setLatitude] = useState('');
@@ -78,6 +79,7 @@ function Home(){
         </Col>
       </Row>
     </Container>  
+    {/* <Details /> */}
     </>
   );
 }
