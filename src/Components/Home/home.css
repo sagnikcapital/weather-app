@@ -122,6 +122,20 @@ cursor: pointer;
 
 .error-message {
   color: red;
+  font-weight: bold; /* Add bold font weight */
+  opacity: 1; /* Start with full opacity */
+  transition: opacity 2s ease-in-out; /* Apply fade-out transition */
+}
+
+.pipe {
+  color: #000; /* Set color of the pipe character */
+  margin: 0 5px; /* Add margin for spacing */
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
