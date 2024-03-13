@@ -24,6 +24,7 @@ $ https://github.com/sagnikcapital/weather-app.git
 ```sh
 $ cd weather-app
 ```
+> Setup 
 ```sh
 $ npm install
 ```
