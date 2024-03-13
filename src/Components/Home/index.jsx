@@ -12,6 +12,14 @@ function Home(){
   const [longitudeError, setLongitudeError] = useState('');
   const [showModal, setShowModal] = useState(false);
 
+  // const handleOpen = () => {
+  //   setShowModal(true)
+  // }
+
+  const handleClose = () => {
+    setShowModal(false)
+  }
+
   const handleChange = (e) => {
     const { value } = e.target;
     // Allow only numbers and a single decimal point
@@ -34,7 +42,7 @@ function Home(){
     if (longitude.trim() === '') {
       setLongitudeError('Longitude cannot be blank');
     }
-    if (!latitudeError && !longitudeError) {
+    if (latitude.trim() !== '' && longitude.trim() !== '') {
       setShowModal(true); // Show modal if there are no errors
       console.log(true);
     }
@@ -84,7 +92,7 @@ function Home(){
         </Col>
       </Row>
     </Container>  
-    {showModal && <Details setShowModal={setShowModal} />}
+    {showModal && <Details open={showModal} onClose={handleClose} />}
     </>
   );
 }

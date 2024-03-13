@@ -1,6 +1,7 @@
 import { Container, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import ContactUs from '../../ContactUs/index'
 
 
 function Header() {

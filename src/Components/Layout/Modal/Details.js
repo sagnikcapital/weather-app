@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Navbar, Nav, Form, FormControl, Button, Modal } from 'react-bootstrap';
+import React from 'react';
+import { Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Details() {
-  const [showModal, setShowModal] = useState(false);
-
+function Details({ open, onClose }) {
   return (
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal show={open} onHide={onClose}>
         <Modal.Header closeButton>
           <Modal.Title>Refer</Modal.Title>
         </Modal.Header>
@@ -14,7 +12,7 @@ function Details() {
           Weather Details!
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button variant="secondary" onClick={onClose}>
             Close
           </Button>
         </Modal.Footer>
