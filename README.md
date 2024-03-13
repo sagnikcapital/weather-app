@@ -28,7 +28,7 @@ $ cd weather-app
 ```sh
 $ npm install
 ```
-> Create .env file and add the API key there.
+> Create .env file and add the API key there. Please refer this link: https://home.openweathermap.org/api_keys
 ```sh
 $ cp .env.example .env
 ```
