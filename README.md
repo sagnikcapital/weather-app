@@ -7,6 +7,15 @@ A weather monitoring system is a technological solution designed to collect, pro
 - Forecasting
 - Alerting and Notification
 
+## Technology
+- React JS (18.0)
+- Open weather API
+
+## Compatibility
+- [NPM  (8.14.0)]()
+- [Node (16.0.0)]()
+- [NPX  (8.14.0)]()
+- [React Cli (5.0.0)]()
 ## Installation and setup
 
 ### `npm run build` fails to minify
