@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './home.css';
 import Header from '../Layout/Header/Header';
-import { Container,Row,Col } from 'react-bootstrap';
+import { Container,Row,Col, Modal } from 'react-bootstrap';
 
 function Home(){
   const [latitude, setLatitude] = useState('');
@@ -39,43 +39,42 @@ function Home(){
       setLatitudeError('');
       setLongitudeError('');
     }, 1000); // Set timeout to 2000 milliseconds (2 seconds)
-
-    return () => clearTimeout(errorTimeout); // Cleanup function to clear timeout
+    return () => clearTimeout(errorTimeout);
   }, [latitudeError, longitudeError]);
 
 
   return (
     <>
-    {/* <Header></Header> */}
-    <Container>
-      <Row>
-        <Col>
-          <div className="contenir">
-            <div className="input-wrapper">
-              <input
-                type="text"
-                className="search"
-                id="search-inp"
-                placeholder="Latitude"
-                value={latitude}
-                onChange={handleChange}
-              />
-              {latitudeError && <div className="error-message">{latitudeError}</div>}
-            </div>  
-            <span className="pipe">|</span> {/* Pipe character */}
-            <div className="input-wrapper">
-              <input
-                type="text"
-                className="search"
-                id="search-inp"
-                placeholder="Longitude"
-                value={longitude}
-                onChange={handleLongitude}
-              />
-              {longitudeError && <div className="error-message">{longitudeError}</div>}
-            </div>  
-            <button class="search-btn" onClick={handleSubmit}  id="search-inp-btn">&#x027A4;</button>
-          </div>
+    <Header></Header>
+    <Container className='h-100'>
+      <Row className='h-100'>
+        <Col className='d-flex align-items-center justify-content-center h-100'>
+            <div className="contenir">
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  className="search"
+                  id="search-inp"
+                  placeholder="Latitude"
+                  value={latitude}
+                  onChange={handleChange}
+                />
+                {latitudeError && <div className="error-message">{latitudeError}</div>}
+              </div>  
+              <span className="pipe">|</span> {/* Pipe character */}
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  className="search"
+                  id="search-inp"
+                  placeholder="Longitude"
+                  value={longitude}
+                  onChange={handleLongitude}
+                />
+                {longitudeError && <div className="error-message">{longitudeError}</div>}
+              </div>  
+              <button class="search-btn" onClick={handleSubmit}  id="search-inp-btn">&#x027A4;</button>
+            </div>
         </Col>
       </Row>
     </Container>  
