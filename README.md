@@ -17,6 +17,22 @@ A weather monitoring system is a technological solution designed to collect, pro
 - [NPX  (8.14.0)]()
 - [React Cli (5.0.0)](https://www.npmjs.com/package/react-cli)
 ## Installation and setup
+> Clone the Application
+```sh
+$ https://github.com/sagnikcapital/weather-app.git
+```
+```sh
+$ cd weather-app
+```
+```sh
+$ npm install
+```
+```sh
+$ cp .env.example .env
+```
+```sh
+$ npm start
+```
 
 ### `npm run build` fails to minify
 
