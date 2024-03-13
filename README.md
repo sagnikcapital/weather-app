@@ -28,6 +28,7 @@ $ cd weather-app
 ```sh
 $ npm install
 ```
+> Create .env file and add the API key there.
 ```sh
 $ cp .env.example .env
 ```
