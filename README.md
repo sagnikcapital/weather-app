@@ -39,6 +39,7 @@ $ npm start
 | URL     |     Parameters    |    Method
 |---------|-------------------|--------------
 |https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key} |  lat, lon | GET |
+|REACT_APP_CONTACT_SUBMIT| name, email, message | POST|
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
