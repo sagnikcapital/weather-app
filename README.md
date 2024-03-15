@@ -38,9 +38,9 @@ $ npm start
 ### Preview
 ![Alt Text](blobs/Preview.png)
 ### Pages
-> Home: '/'
-> Contact Us: '/contact-us'
-> About Us: '/about-us'
+- Home:  `/`
+- Contact Us: `/contact-us`
+- About Us: `/about-us`
 ### API Details:
 | URL     |     Parameters    |    Method
 |---------|-------------------|--------------
