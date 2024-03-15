@@ -35,6 +35,9 @@ $ cp .env.example .env
 ```sh
 $ npm start
 ```
+### Preview
+![Alt Text](blobs/Preview.png)
+
 ### API Details:
 | URL     |     Parameters    |    Method
 |---------|-------------------|--------------
