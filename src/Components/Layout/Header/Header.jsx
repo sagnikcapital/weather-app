@@ -14,7 +14,7 @@ function Header() {
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">Home</Nav.Link>
               <Nav.Link href="https://home.openweathermap.org/">About Open Weather</Nav.Link>
-              <Nav.Link href="#">Contact Us</Nav.Link>
+              <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
