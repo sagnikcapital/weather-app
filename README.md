@@ -41,6 +41,9 @@ $ npm start
 - Home:  `/`
 - Contact Us: `/contact-us`
 - About Us: `/about-us`
+
+### Demo
+- Refer: https://sagnikd-weather-app.vercel.app/
 ### API Details:
 | URL     |     Parameters    |    Method
 |---------|-------------------|--------------
