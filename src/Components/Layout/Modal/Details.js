@@ -32,12 +32,12 @@ function Details({ open, onClose, data }) {
             viewBox={`0 0 256 256`}
           />
         ) : (
-          <QRCode
-            size={256}
-            style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-            value={'Try again!!!'}
-            viewBox={`0 0 256 256`}
-          />
+          // <QRCode
+          //   size={256}
+          //   style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+          //   value={'Try again!!!'}
+          //   viewBox={`0 0 256 256`}
+          // />
         )}
         </div>
         <Modal.Footer>
