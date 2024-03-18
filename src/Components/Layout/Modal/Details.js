@@ -24,12 +24,21 @@ function Details({ open, onClose, data }) {
         )}
         </Modal.Body>
         <div style={{ height: "auto", margin: "0 auto", maxWidth: 64, width: "100%" }}>
+        {!!data ? (
           <QRCode
             size={256}
             style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-            value={data.sys.country}
+            value={data?.sys?.country}
             viewBox={`0 0 256 256`}
           />
+        ) : (
+          <QRCode
+            size={256}
+            style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+            value={'Try again!!!'}
+            viewBox={`0 0 256 256`}
+          />
+        )}
         </div>
         <Modal.Footer>
           <Button variant="secondary" onClick={onClose}>
