@@ -38,6 +38,7 @@ function Details({ open, onClose, data }) {
           //   value={'Try again!!!'}
           //   viewBox={`0 0 256 256`}
           // />
+          <p>No data found</p>
         )}
         </div>
         <Modal.Footer>
