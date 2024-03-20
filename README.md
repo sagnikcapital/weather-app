@@ -32,6 +32,13 @@ $ npm install
 ```sh
 $ cp .env.example .env
 ```
+> Fille the details at .env file
+```env
+REACT_APP_API_KEY=''
+REACT_APP_WEATHER_API_URL='https://api.openweathermap.org/data/2.5/weather'
+REACT_APP_CONTACT_SUBMIT=''
+REACT_APP_POST_CONTACTS_URL=''
+```
 ```sh
 $ npm start
 ```
