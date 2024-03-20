@@ -15,9 +15,9 @@ function ContactUs() {
   };
 
   const contactApi = process.env.REACT_APP_CONTACT_SUBMIT;
+  console.log(contactApi);
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(contactApi, {
         method: 'POST',
@@ -40,12 +40,12 @@ function ContactUs() {
   return (
     <>
       <Header></Header>
-      <section className="section">
+      {/* <section className="section">
       <Container>
         <h1 className="title">Please contact Us</h1>
         <Row>
           <Col lg={6}>
-            <Form action="#" method="post">
+            <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formName">
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="text" placeholder="Your Name" />
@@ -65,7 +65,7 @@ function ContactUs() {
           </Col>
         </Row>
       </Container>
-    </section>
+    </section> */}
     </>
   );
 }
