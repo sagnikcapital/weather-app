@@ -40,7 +40,7 @@ function ContactUs() {
   return (
     <>
       <Header></Header>
-      {/* <section className="section">
+    <section className="section">
       <Container>
         <h1 className="title">Please contact Us</h1>
         <Row>
@@ -65,7 +65,7 @@ function ContactUs() {
           </Col>
         </Row>
       </Container>
-    </section> */}
+    </section>
     </>
   );
 }
