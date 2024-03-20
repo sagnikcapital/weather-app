@@ -4,6 +4,39 @@ import Header from '../Layout/Header/Header';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const contactApi = process.env.REACT_APP_CONTACT_SUBMIT;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(contactApi, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        // Handle success
+        console.log('Form submitted successfully');
+      } else {
+        // Handle error
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
   return (
     <>
       <Header></Header>
