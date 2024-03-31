@@ -1,5 +1,6 @@
-# Weather Monitring Application
+# Weather Monitoring Application
 
+![](https://www.logo.wine/a/logo/React_(web_framework)/React_(web_framework)-Logo.wine.svg)
 A weather monitoring system is a technological solution designed to collect, process, analyze, and present data related to atmospheric conditions, such as temperature, humidity, pressure, wind speed, precipitation, and more. These systems are crucial for various applications, including agriculture, aviation, transportation, disaster management, and scientific research. Here's a comprehensive description of a typical weather monitoring system:
 
 - Real-time Data Collection
